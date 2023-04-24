@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% if error_message %}
+        <div class="alert alert-danger" role="alert">
+            {{ error_message }}
+        </div>
+    {% endif %}
+	{% if error_message %}
+		<p class="error">{{ error_message }}</p>
+	{% endif %}
+	<div class="form-box-box-box">
+	<div class="form-box-box">
+		<div class="form-logo-box">
+			<img src="/static/images/wikitrees!-logo.png">
+		</div>
+		<div class="form-icon-box">
+			<img src="/static/images/profile.PNG">
+		</div>
+		<div class="form-box">
+			<form method="post">
+				<div class="form-input-box">
+					<div class="form-input-label-box">
+						<label for="username">Username</label>
+					</div>
+					<input type="text" id="username" name="username" required>
+				</div>
+				<div class="form-input-box">
+					<div class="form-input-label-box">
+						<label for="password">Password</label>
+					</div>
+					<input type="password" id="password" name="password" required>
+				</div>
+				<div class="form-button">
+					<button type="submit">{% if active_tab == 'SignUp' %}Sign Up{% else %}Log In{% endif %}</button>
+				</div>
+			</form>
+		</div>                         
+	</div>
+	</div>
+{% endblock %}
